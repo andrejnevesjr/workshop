@@ -1,0 +1,7 @@
+/home/andrejr/Documents/JavaProjects/workshop/src/main/java/com/norbertoenomoto/workshop/repository/UserRepository.java
+/home/andrejr/Documents/JavaProjects/workshop/src/main/java/com/norbertoenomoto/workshop/WorkshopApplication.java
+/home/andrejr/Documents/JavaProjects/workshop/src/main/java/com/norbertoenomoto/workshop/exceptions/ServiceException.java
+/home/andrejr/Documents/JavaProjects/workshop/src/main/java/com/norbertoenomoto/workshop/service/UserService.java
+/home/andrejr/Documents/JavaProjects/workshop/src/main/java/com/norbertoenomoto/workshop/controller/UserController.java
+/home/andrejr/Documents/JavaProjects/workshop/src/main/java/com/norbertoenomoto/workshop/model/UserModel.java
+/home/andrejr/Documents/JavaProjects/workshop/src/main/java/com/norbertoenomoto/workshop/dto/UserDto.java

@@ -1,0 +1,9 @@
+com/norbertoenomoto/workshop/WorkshopApplication.class
+com/norbertoenomoto/workshop/model/UserModel.class
+com/norbertoenomoto/workshop/exceptions/ServiceException.class
+com/norbertoenomoto/workshop/controller/UserController.class
+com/norbertoenomoto/workshop/dto/UserDto.class
+com/norbertoenomoto/workshop/model/UserModel$UserModelBuilder.class
+com/norbertoenomoto/workshop/repository/UserRepository.class
+com/norbertoenomoto/workshop/service/UserService.class
+com/norbertoenomoto/workshop/dto/UserDto$UserDtoBuilder.class

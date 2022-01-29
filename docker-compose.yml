@@ -1,0 +1,48 @@
+version: '3.6'
+services:
+
+  mysql:
+    container_name: mysql
+    image: mysql:8.0.17
+    deploy:
+      resources:
+        limits:
+          memory: 700MB    
+    hostname: mysql
+    volumes:
+      - dbdata:/var/lib/mysql
+    cap_add: 
+      - SYS_NICE
+    environment:
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: workshop2021
+      MYSQL_DATABASE: workshop
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u $$MYSQL_ROOT_USER --password=$$MYSQL_ROOT_PASSWORD
+      interval: 20s
+      timeout: 10s
+      retries: 5
+    ports: 
+      - "3306:3306"
+
+  restapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: workshop/restapi:1.0
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 500MB
+    container_name: restapi
+    hostname: restapi
+    links:
+      - mysql
+    depends_on:
+      - mysql
+    ports:
+      - 8080:8080
+
+volumes:
+  dbdata:
